@@ -8,7 +8,7 @@ body{
 /*Configurações do Header*/
 .banner{
     text-align: center;
-    height: 605px;
+    min-height: 605px;
     background-image: linear-gradient(#00000000, #31a9dd44, #00000000),  url('../images/banner.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,9 +16,9 @@ body{
 }   
 
 .banner-content{
-    width: 510px;
+    max-width: 510px;
     margin: auto;
-    padding: 60px;
+    padding: 60px 0px;
 }
 
 .logo{
@@ -34,7 +34,7 @@ body{
 }
 
 .banner-content h1 {
-    width: 435px;
+    max-width: 435px;
     height: 50px;
     margin: 16px auto;
     font-size: 2.5rem;
@@ -47,7 +47,7 @@ body{
 .banner-content p{
     color: white;
     font-size: 1.2rem; 
-    width: 510px;
+    max-width: 510px;
     margin: 0 auto 20px;
     word-spacing: .12rem;
 }
@@ -79,7 +79,7 @@ body{
 /*configurações do corpo*/
 #course-content{
     text-align: center;
-    width: 790px;
+    max-width: 790px;
     height: 325px;
     margin: 80px auto;  
 }
@@ -98,7 +98,7 @@ body{
 }
 
 .modules-list{
-    width: 550px;
+    max-width: 550px;
     margin: auto;
 }
 
@@ -123,6 +123,7 @@ body{
 
 #transform-world{
     height: 500px;
+    width: 100%;
     border-top: 1px solid #33A8DB;
     border-bottom: 1px solid #33A8DB;
     background: fixed url('../images/woman-code.png');
@@ -131,8 +132,8 @@ body{
 }
 
 #transform-world p{
-    width: 210px;
-    height: 140px;
+    max-width: 210px;
+    min-height: 140px;
     margin: 200px;
     color: white;
     text-shadow: 3px 2px 0px #33A8DB;
@@ -148,7 +149,7 @@ body{
 
 #professional-challenges h2{
     color: #33A8DB;
-    width: 740px;
+    max-width: 740px;
     margin: 60px auto;
     text-transform: uppercase;
     font-size: 2rem;
@@ -157,7 +158,7 @@ body{
 
 #professional-challenges p{
     color: white;
-    width: 790px;
+    max-width: 790px;
     margin: 60px auto;
     font-size: 1rem;
 }
@@ -179,4 +180,58 @@ footer a{
 
 footer a:hover{
     text-decoration: underline;
+}
+
+
+/*Aplicando para funcionamento em mobile*/
+@media(max-width: 800px){
+    .banner-content h1 {
+        font-size: 1.6rem;
+        height: 55px;
+    }
+    .banner-content p {
+        font-size: 1rem;
+        max-width: 360px;
+    }
+    .banner-content button{
+        width: 150px;
+        text-transform: uppercase;
+        margin: 15px;
+        padding: 20px 0px;
+        letter-spacing: .15rem;
+        font-size: 1rem; 
+    }
+    #course-content {
+        height: 400px;
+    }
+    #course-content h2{
+        color: #33A8DB;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        margin-bottom: 25px
+    }
+    #course-content p{
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+    .modules-list{
+        max-width: 550px;
+        margin: auto;
+    }
+    .modules-list .module{
+        max-width: 320px;
+    }
+    #transform-world p{
+        margin: 200px 0px 0px 40px;
+    }
+    #professional-challenges h2{
+        max-width: 360px;
+    }
+    #professional-challenges p{
+        max-width: 360px;
+        padding: 15px;
+    }
+    #professional-challenges img{
+        max-width: 360px;
+    }
 }
